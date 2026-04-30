@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Peter Lundy | Web Mapping Portfolio</title>
+  <style>
+  :root {
+    --bg: #050807;
+    --card: rgba(10, 18, 16, 0.88);
+    --text: #e8fff7;
+    --muted: #b7d6cc;
+    --seafoam: #64f4c4;
+    --seafoam-dark: #34c99b;
+    --border: rgba(100, 244, 196, 0.35);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  background-color: var(--bg);
+
+  background-image:
+    repeating-linear-gradient(
+      120deg,
+      rgba(100, 244, 196, 0.06) 0px,
+      rgba(100, 244, 196, 0.06) 1px,
+      transparent 2px,
+      transparent 40px
+    ),
+    repeating-linear-gradient(
+      60deg,
+      rgba(100, 244, 196, 0.05) 0px,
+      rgba(100, 244, 196, 0.05) 1px,
+      transparent 2px,
+      transparent 45px
+    ),
+    radial-gradient(
+      ellipse at 30% 40%,
+      rgba(100, 244, 196, 0.08),
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse at 70% 60%,
+      rgba(100, 244, 196, 0.06),
+      transparent 65%
+    );
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://www.transparenttextures.com/patterns/topography.png');
+  opacity: 0.15;
+  pointer-events: none;
+}
+  background-attachment: fixed;
+}
+
+  header {
+    text-align: center;
+    padding: 70px 20px 50px;
+    background: rgba(0, 0, 0, 0.55);
+    border-bottom: 1px solid var(--border);
+  }
+
+  header h1 {
+    margin: 0 0 12px;
+    font-size: 2.6rem;
+    letter-spacing: 1px;
+  }
+
+  header p {
+    max-width: 760px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 1.05rem;
+  }
+
+  main {
+    max-width: 950px;
+    margin: 35px auto;
+    padding: 0 20px 50px;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 24px;
+    margin-bottom: 22px;
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(4px);
+  }
+
+  .card h2 {
+    margin-top: 0;
+    color: var(--seafoam);
+  }
+
+  .card p {
+    color: var(--muted);
+  }
+
+  a {
+    display: inline-block;
+    margin-top: 10px;
+    background: var(--seafoam);
+    color: #06100d;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  a:hover {
+    background: var(--seafoam-dark);
+  }
+</style>
+</head>
+
+<body>
+ <header>
+  <h1>Peter Lundy | Environmental Mapping & GIS Portfolio</h1>
+
+  <div style="max-width: 800px; margin: 20px auto; text-align: left;">
+
+    <h3>About Me</h3>
+    <p>
+      I am an environmental studies student developing skills in Geographic Information Systems (GIS) and spatial analysis. My work focuses on understanding how environmental systems, infrastructure, and human activity interact across space, with an emphasis on practical, real-world application.
+    </p>
+
+    <h3>What This Portfolio Shows</h3>
+    <ul>
+      <li>Interactive web maps built using Leaflet</li>
+      <li>Use of real-world spatial data (GeoJSON and external datasets)</li>
+      <li>Data visualization techniques such as proportional symbols and choropleths</li>
+      <li>User interaction through click events and dynamic feedback</li>
+    </ul>
+
+    <h3>Course Progression</h3>
+    <ul>
+      <li>Started with basic map setup, markers, and popups</li>
+      <li>Moved into symbol scaling and data-driven visualization</li>
+      <li>Developed interactive mapping tools and user-based inputs</li>
+      <li>Applied GIS concepts to environmental and spatial patterns</li>
+    </ul>
+
+  </div>
+</header>
+
+  <main>
+    <h2 style="text-align:center; margin-top:40px;">Project Portfolio</h2>
+    <div class="card">
+      <h2>Pennsylvania Cities Map</h2>
+      <p>This introductory Leaflet map shows Pennsylvania cities including Harrisburg and Lancaster using markers and popups.</p>
+      <a href="https://tub81865.github.io/pa-cities-map/pa-cities.html" target="_blank">View Map</a>
+    </div>
+
+   <div class="card">
+  <h2>Power Plants Map</h2>
+  <p>This map visualizes power generation facilities using proportional symbols to represent capacity and fuel sources. It demonstrates working with GeoJSON data and dynamic scaling in Leaflet.</p>
+  <a href="https://tub81865.github.io/Power_Generation/" target="_blank">View Map</a>
+</div>
+
+ <div class="card">
+  <h2>World Populated Places Map</h2>
+  <p>This map displays global populated places using proportional symbols to represent population size. It demonstrates working with GeoJSON data and scaling symbols dynamically to visualize spatial patterns.</p>
+  <a href="https://tub81865.github.io/web-mapping-mastery/" target="_blank">View Map</a>
+</div>
+
+  <div class="card">
+  <h2>Eiffel Tower Marker Game</h2>
+  <p>This interactive map challenges users to locate the Eiffel Tower by placing a marker on the map. It demonstrates user interaction, click events, and real-time feedback using Leaflet.</p>
+  <a href="https://tub81865.github.io/web-mapping-mastery/markerGame.html" target="_blank">Play Map</a>
+</div>
+<div class="card">
+  <h2>Avocado Price Choropleth Map</h2>
+  <p>This map visualizes avocado price data across regions using a choropleth style. It demonstrates data classification, color scaling, and how geographic patterns can reveal trends in market pricing.</p>
+  <a href="https://tub81865.github.io/web-mapping-mastery/avocado.html" target="_blank">View Map</a>
+</div>
+  </main>
+</body>
+</html>
