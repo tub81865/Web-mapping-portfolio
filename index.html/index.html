@@ -124,6 +124,14 @@ body::before {
   a:hover {
     background: var(--seafoam-dark);
   }
+    .map-img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  margin-bottom: 16px;
+}
 </style>
 </head>
 
@@ -160,10 +168,11 @@ body::before {
   <main>
     <h2 style="text-align:center; margin-top:40px;">Project Portfolio</h2>
     <div class="card">
-      <h2>Pennsylvania Cities Map</h2>
-      <p>This introductory Leaflet map shows Pennsylvania cities including Harrisburg and Lancaster using markers and popups.</p>
-      <a href="https://tub81865.github.io/pa-cities-map/pa-cities.html" target="_blank">View Map</a>
-    </div>
+  <img src="images/pa-cities.png" alt="PA Cities Map" class="map-img">
+  <h2>Pennsylvania Cities Map</h2>
+  <p>This introductory Leaflet map shows Pennsylvania cities including Harrisburg and Lancaster using markers and popups.</p>
+  <a href="https://tub81865.github.io/pa-cities-map/pa-cities.html" target="_blank">View Map</a>
+</div>
 
    <div class="card">
   <h2>Power Plants Map</h2>
