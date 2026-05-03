@@ -1,215 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Peter Lundy | Web Mapping Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peter Lundy | Environmental Mapping & GIS Portfolio</title>
+
   <style>
-  :root {
-    --bg: #050807;
-    --card: rgba(10, 18, 16, 0.88);
-    --text: #e8fff7;
-    --muted: #b7d6cc;
-    --seafoam: #64f4c4;
-    --seafoam-dark: #34c99b;
-    --border: rgba(100, 244, 196, 0.35);
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
-  }
+    :root {
+      --bg: #050807;
+      --card: rgba(10, 18, 16, 0.88);
+      --text: #e8fff7;
+      --muted: #b7d6cc;
+      --seafoam: #64f4c4;
+      --seafoam-dark: #34c99b;
+      --border: rgba(100, 244, 196, 0.35);
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    }
 
-  * {
-    box-sizing: border-box;
-  }
+    * {
+      box-sizing: border-box;
+    }
 
-  body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--text);
-  line-height: 1.6;
-  background-color: var(--bg);
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background-color: var(--bg);
+      background-image:
+        repeating-linear-gradient(
+          120deg,
+          rgba(100, 244, 196, 0.06) 0px,
+          rgba(100, 244, 196, 0.06) 1px,
+          transparent 2px,
+          transparent 40px
+        ),
+        repeating-linear-gradient(
+          60deg,
+          rgba(100, 244, 196, 0.05) 0px,
+          rgba(100, 244, 196, 0.05) 1px,
+          transparent 2px,
+          transparent 45px
+        ),
+        radial-gradient(
+          ellipse at 30% 40%,
+          rgba(100, 244, 196, 0.08),
+          transparent 60%
+        ),
+        radial-gradient(
+          ellipse at 70% 60%,
+          rgba(100, 244, 196, 0.06),
+          transparent 65%
+        );
+      background-attachment: fixed;
+    }
 
-  background-image:
-    repeating-linear-gradient(
-      120deg,
-      rgba(100, 244, 196, 0.06) 0px,
-      rgba(100, 244, 196, 0.06) 1px,
-      transparent 2px,
-      transparent 40px
-    ),
-    repeating-linear-gradient(
-      60deg,
-      rgba(100, 244, 196, 0.05) 0px,
-      rgba(100, 244, 196, 0.05) 1px,
-      transparent 2px,
-      transparent 45px
-    ),
-    radial-gradient(
-      ellipse at 30% 40%,
-      rgba(100, 244, 196, 0.08),
-      transparent 60%
-    ),
-    radial-gradient(
-      ellipse at 70% 60%,
-      rgba(100, 244, 196, 0.06),
-      transparent 65%
-    );
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('https://www.transparenttextures.com/patterns/topography.png');
-  opacity: 0.15;
-  pointer-events: none;
-}
-  background-attachment: fixed;
-}
+    header {
+      text-align: center;
+      padding: 70px 20px 50px;
+      background: rgba(0, 0, 0, 0.55);
+      border-bottom: 1px solid var(--border);
+    }
 
-  header {
-    text-align: center;
-    padding: 70px 20px 50px;
-    background: rgba(0, 0, 0, 0.55);
-    border-bottom: 1px solid var(--border);
-  }
+    header h1 {
+      margin: 0 0 12px;
+      font-size: 2.6rem;
+      letter-spacing: 1px;
+    }
 
-  header h1 {
-    margin: 0 0 12px;
-    font-size: 2.6rem;
-    letter-spacing: 1px;
-  }
+    header div {
+      max-width: 850px;
+      margin: 20px auto;
+      text-align: left;
+    }
 
-  header p {
-    max-width: 760px;
-    margin: 0 auto;
-    color: var(--muted);
-    font-size: 1.05rem;
-  }
+    header h3 {
+      color: var(--seafoam);
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
 
-  main {
-    max-width: 950px;
-    margin: 35px auto;
-    padding: 0 20px 50px;
-  }
+    header p,
+    header li {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
 
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    padding: 24px;
-    margin-bottom: 22px;
-    border-radius: 14px;
-    box-shadow: var(--shadow);
-    backdrop-filter: blur(4px);
-  }
+    main {
+      max-width: 950px;
+      margin: 35px auto;
+      padding: 0 20px 50px;
+    }
 
-  .card h2 {
-    margin-top: 0;
-    color: var(--seafoam);
-  }
+    .section-title {
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 25px;
+      color: var(--seafoam);
+      font-size: 2rem;
+    }
 
-  .card p {
-    color: var(--muted);
-  }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 24px;
+      margin-bottom: 22px;
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(4px);
+    }
 
-  a {
-    display: inline-block;
-    margin-top: 10px;
-    background: var(--seafoam);
-    color: #06100d;
-    padding: 10px 16px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-  }
+    .card h2 {
+      margin-top: 0;
+      color: var(--seafoam);
+    }
 
-  a:hover {
-    background: var(--seafoam-dark);
-  }
+    .card p {
+      color: var(--muted);
+    }
+
     .map-img {
-  width: 100%;
-  max-height: 320px;
-  object-fit: cover;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  margin-bottom: 16px;
-}
-</style>
+      width: 100%;
+      max-height: 320px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .img-link {
+      display: block;
+      padding: 0;
+      margin: 0 0 12px 0;
+      background: none;
+      border-radius: 12px;
+      text-decoration: none;
+    }
+
+    .img-link:hover {
+      background: none;
+    }
+
+    .img-link:hover img {
+      opacity: 0.9;
+    }
+
+    .button-link {
+      display: inline-block;
+      margin-top: 10px;
+      background: var(--seafoam);
+      color: #06100d;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .button-link:hover {
+      background: var(--seafoam-dark);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.4);
+    }
+  </style>
 </head>
 
 <body>
- <header>
-  <h1>Peter Lundy | Environmental Mapping & GIS Portfolio</h1>
+  <header>
+    <h1>Peter Lundy | Environmental Mapping & GIS Portfolio</h1>
 
-  <div style="max-width: 800px; margin: 20px auto; text-align: left;">
+    <div>
+      <h3>About Me</h3>
+      <p>
+        I am an environmental studies student developing practical skills in Geographic Information Systems (GIS), web mapping, and spatial analysis. My work focuses on understanding how environmental patterns, infrastructure, and human activity interact across space.
+      </p>
 
-    <h3>About Me</h3>
-    <p>
-      I am an environmental studies student developing skills in Geographic Information Systems (GIS) and spatial analysis. My work focuses on understanding how environmental systems, infrastructure, and human activity interact across space, with an emphasis on practical, real-world application.
-    </p>
+      <h3>What This Portfolio Shows</h3>
+      <ul>
+        <li>Interactive web maps built with Leaflet and GitHub Pages</li>
+        <li>Use of spatial data including GeoJSON and external datasets</li>
+        <li>Visualization techniques such as proportional symbols and choropleth mapping</li>
+        <li>User interaction through map clicks, popups, and real-time feedback</li>
+      </ul>
 
-    <h3>What This Portfolio Shows</h3>
-    <ul>
-      <li>Interactive web maps built using Leaflet</li>
-      <li>Use of real-world spatial data (GeoJSON and external datasets)</li>
-      <li>Data visualization techniques such as proportional symbols and choropleths</li>
-      <li>User interaction through click events and dynamic feedback</li>
-    </ul>
-
-    <h3>Course Progression</h3>
-    <ul>
-      <li>Started with basic map setup, markers, and popups</li>
-      <li>Moved into symbol scaling and data-driven visualization</li>
-      <li>Developed interactive mapping tools and user-based inputs</li>
-      <li>Applied GIS concepts to environmental and spatial patterns</li>
-    </ul>
-
-  </div>
-</header>
+      <h3>Course Progression</h3>
+      <ul>
+        <li>Started with basic map setup, markers, and popups</li>
+        <li>Moved into scaled symbols and data-driven visualization</li>
+        <li>Built interactive mapping tools and user-based inputs</li>
+        <li>Applied GIS concepts to environmental and spatial patterns</li>
+      </ul>
+    </div>
+  </header>
 
   <main>
-    <h2 style="text-align:center; margin-top:40px;">Project Portfolio</h2>
+    <h2 class="section-title">Project Portfolio</h2>
+
     <div class="card">
-  <img src="images/pa-cities.png" alt="PA Cities Map" class="map-img">
-  <h2>Pennsylvania Cities Map</h2>
-  <p>This introductory Leaflet map shows Pennsylvania cities including Harrisburg and Lancaster using markers and popups.</p>
- <a href="https://tub81865.github.io/pa-cities-map/pa-cities.html" class="img-link">
-  <img src="images/pa-cities.png" class="map-img">
-</a>
-</div>
+      <a href="https://tub81865.github.io/pa-cities-map/pa-cities.html" target="_blank" class="img-link">
+        <img src="images/pa-cities.png" alt="Pennsylvania Cities Map" class="map-img">
+      </a>
+      <h2>Pennsylvania Cities Map</h2>
+      <p>
+        This introductory Leaflet map shows Pennsylvania cities including Harrisburg and Lancaster using markers and popups. I learned basic Leaflet setup, marker placement, popup formatting, and how to publish a simple web map using GitHub Pages.
+      </p>
+      <a href="https://tub81865.github.io/pa-cities-map/pa-cities.html" target="_blank" class="button-link">View Map</a>
+    </div>
 
-  <div class="card">
-  <a href="https://tub81865.github.io/Power_Generation/" target="_blank">
-    <img src="images/power-plants.png" alt="Power Plants Map" class="map-img">
-  </a>
-  <h2>Power Plants Map (Initial Visualization)</h2>
-  <p>This map visualizes power generation facilities using proportional symbols to represent capacity. I learned how to scale symbols dynamically and work with GeoJSON data in Leaflet.</p>
-  <a href="https://tub81865.github.io/Power_Generation/" target="_blank">View Map</a>
-</div>
+    <div class="card">
+      <a href="https://tub81865.github.io/Power_Generation/" target="_blank" class="img-link">
+        <img src="images/power-plants.png" alt="Power Plants Map" class="map-img">
+      </a>
+      <h2>Power Plants Map (Initial Visualization)</h2>
+      <p>
+        This map visualizes power generation facilities using proportional symbols to represent capacity. I learned how to scale symbols dynamically and work with GeoJSON data in Leaflet.
+      </p>
+      <a href="https://tub81865.github.io/Power_Generation/" target="_blank" class="button-link">View Map</a>
+    </div>
 
- <div class="card">
-  <a href="https://tub81865.github.io/web-mapping-mastery/" target="_blank">
-    <img src="images/world-population.png" alt="World Population Map" class="map-img">
-  </a>
-  <h2>World Populated Places Map</h2>
-  <p>This map displays global populated places using proportional symbols based on population size. I learned how to visualize large datasets and apply scaling techniques to reveal spatial patterns.</p>
-  <a href="https://tub81865.github.io/web-mapping-mastery/" target="_blank">View Map</a>
-</div>
 
-  <div class="card">
-  <a href="https://tub81865.github.io/web-mapping-mastery/markerGame.html" target="_blank">
-    <img src="images/marker-game.png" alt="Eiffel Tower Marker Game" class="map-img">
-  </a>
-  <h2>Eiffel Tower Marker Game</h2>
-  <p>This interactive map challenges users to locate the Eiffel Tower by placing a marker on the map. I learned how to handle user input, click events, and provide real-time feedback in Leaflet.</p>
-  <a href="https://tub81865.github.io/web-mapping-mastery/markerGame.html" target="_blank">Play Map</a>
-</div>
-<div class="card">
-  <a href="https://tub81865.github.io/web-mapping-mastery/avocado.html" target="_blank">
-    <img src="images/avocado-map.png" alt="Avocado Choropleth Map" class="map-img">
-  </a>
-  <h2>Avocado Price Choropleth Map</h2>
-  <p>This map visualizes avocado price data using a choropleth to show regional variation. I learned how to apply color classification and use visual hierarchy to communicate data patterns.</p>
-  <a href="https://tub81865.github.io/web-mapping-mastery/avocado.html" target="_blank">View Map</a>
-</div>
+    <div class="card">
+      <a href="https://tub81865.github.io/web-mapping-mastery/" target="_blank" class="img-link">
+        <img src="images/world-population.png" alt="World Populated Places Map" class="map-img">
+      </a>
+      <h2>World Populated Places Map</h2>
+      <p>
+        This map displays global populated places using proportional symbols based on population size. I learned how to work with larger datasets and apply scaling techniques to reveal global spatial patterns.
+      </p>
+      <a href="https://tub81865.github.io/web-mapping-mastery/" target="_blank" class="button-link">View Map</a>
+    </div>
+
+    <div class="card">
+      <a href="https://tub81865.github.io/web-mapping-mastery/markerGame.html" target="_blank" class="img-link">
+        <img src="images/marker-game.png" alt="Eiffel Tower Marker Game" class="map-img">
+      </a>
+      <h2>Eiffel Tower Marker Game</h2>
+      <p>
+        This interactive map challenges users to locate the Eiffel Tower by placing a marker on the map. I learned how to handle user input, map click events, and real-time feedback using Leaflet.
+      </p>
+      <a href="https://tub81865.github.io/web-mapping-mastery/markerGame.html" target="_blank" class="button-link">Play Map</a>
+    </div>
+
+    <div class="card">
+      <a href="https://tub81865.github.io/web-mapping-mastery/avocado.html" target="_blank" class="img-link">
+        <img src="images/avocado-map.png" alt="Avocado Price Choropleth Map" class="map-img">
+      </a>
+      <h2>Avocado Price Choropleth Map</h2>
+      <p>
+        This map visualizes avocado price data using a choropleth to show regional variation. I learned how to apply color classification and visual hierarchy to communicate patterns in data.
+      </p>
+      <a href="https://tub81865.github.io/web-mapping-mastery/avocado.html" target="_blank" class="button-link">View Map</a>
+    </div>
   </main>
+
+  <footer>
+    <p>This portfolio reflects my progress in web mapping, Leaflet, GeoJSON, proportional symbols, choropleth mapping, and interactive GIS design.</p>
+  </footer>
 </body>
 </html>
